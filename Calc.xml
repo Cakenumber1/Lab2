@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Calc</name>
+    </assembly>
+    <members>
+        <member name="T:Calc.Func">
+            <summary>
+            Contains 7 functions of different maths actions.
+            </summary>
+            <value>Each function of the class gets 1 or 2 doubles and always returns 1 double</value>
+        </member>
+        <member name="M:Calc.Func.Sum(System.Double,System.Double)">
+            <summary>
+            Counts the summary of 2 numbers.
+            </summary>
+            <value>Gets 2 doubles, returns 1 double.</value>
+        </member>
+        <member name="M:Calc.Func.Dif(System.Double,System.Double)">
+            <summary>
+            Counts the differance of 2 numbers.
+            </summary>
+            <value>Gets 2 doubles, returns 1 double.</value>
+        </member>
+        <member name="M:Calc.Func.Comp(System.Double,System.Double)">
+            <summary>
+            Counts the composition of 2 numbers.
+            </summary>
+            <value>Gets 2 doubles, returns 1 double.</value>
+        </member>
+        <member name="M:Calc.Func.Div(System.Double,System.Double)">
+            <summary>
+            Counts the quotient of 2 numbers.
+            </summary>
+            <value>Gets 2 double, returns 1 double.</value>
+        </member>
+        <member name="M:Calc.Func.Sqrt(System.Double)">
+            <summary>
+            Counts the square root a number.
+            </summary>
+            <value>Gets 1 double, returns 1 double.</value>
+        </member>
+        <member name="M:Calc.Func.Pow(System.Double,System.Double)">
+            <summary>
+            Counts the pervii double v stepeni vtorogo.
+            </summary>
+            <value>Gets 2 doubles, returns 1 double.</value>
+        </member>
+        <member name="M:Calc.Func.Fac(System.Double)">
+            <summary>
+            Counts the factorial of a number.
+            </summary>
+            <value>Gets 1 double, returns 1 double.</value>
+        </member>
+        <member name="T:Calc.Menu">
+            <summary>
+            Contains 2 functions, provides kind of an interface for user.
+            </summary>
+            <value>Each function of the class gets a string. ParserM returns string. StartMenu is void function</value>
+        </member>
+        <member name="M:Calc.Menu.ParserM(System.String)">
+            <summary>
+            Recognize and do what action user expects if its possible, if not reports about it.
+            </summary>
+            <value>ParserM gets a string from user, through StartMenu, and doubles from Func. ParserM returns string.</value>
+        </member>
+        <member name="M:Calc.Menu.StartMenu">
+            <summary>
+            Recognize and do what action user expects if its possible, if not reports about it, provides templates.
+            </summary>
+            <value>StartMenu gets strings from user, and strings from ParserM. Returns nothing, but prints in console the results.</value>
+        </member>
+        <member name="T:Calc.Program">
+            <summary>
+            Procedure entry point.
+            </summary>
+            <value>Gets text(strings) from console. Returns 0</value>
+        </member>
+    </members>
+</doc>
