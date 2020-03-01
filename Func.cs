@@ -49,5 +49,12 @@ namespace Calc
         /// <param name="a"></param>
         /// <returns></returns>
         public double Sin(double a) { return Math.Sin(a); }
+        /// <summary>
+        /// Counts cos of an angle.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public double Cos(double a) { return Math.Cos(a); }
+
     }
 }
