@@ -43,5 +43,11 @@ namespace Calc
         /// </summary>
         /// <value>Gets 1 double, returns 1 double.</value>
         public double Fac(double a) { int ans=1; for (int i = 1; i <= a; i++) { ans *= i; } return ans; }
+        /// <summary>
+        /// Counts sin of an angle.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public double Sin(double a) { return Math.Sin(a); }
     }
 }
