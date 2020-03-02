@@ -14,6 +14,7 @@ namespace Calc
     public class Menu
     {
         Func func = new Func();
+        string cash = "";
         /// <summary>
         /// Recognize and do what action user expects if its possible, if not reports about it.
         /// </summary>
@@ -31,6 +32,7 @@ namespace Calc
                 try
                 {
                     double r = Convert.ToDouble(f);
+                    cash = q;
                     return func.Sqrt(r).ToString();
                 }
                 catch (FormatException)
@@ -48,11 +50,11 @@ namespace Calc
                     double f = Convert.ToDouble(words[0]);
                     double s = Convert.ToDouble(words[1]);
                     string znak = q.Substring(words[0].Length, q.Length - words[0].Length - words[1].Length);
-                    if (znak == "+") { return func.Sum(f, s).ToString(); }
-                    if (znak == "-") { return func.Dif(f, s).ToString(); }
-                    if (znak == "*") { return func.Comp(f, s).ToString(); }
-                    if (znak == "/") { return func.Div(f, s).ToString(); }
-                    if (znak == "^") { return func.Pow(f, s).ToString(); }
+                    if (znak == "+") { cash = q; return func.Sum(f, s).ToString(); }
+                    if (znak == "-") { cash = q; return func.Dif(f, s).ToString(); }
+                    if (znak == "*") { cash = q; return func.Comp(f, s).ToString(); }
+                    if (znak == "/") { cash = q; return func.Div(f, s).ToString(); }
+                    if (znak == "^") { cash = q; return func.Pow(f, s).ToString(); }
                     return "Chto-to poshlo ne tak";
                 }
                 catch (FormatException)
@@ -67,7 +69,9 @@ namespace Calc
                 try
                 {
                     double d = Convert.ToDouble(q.Substring(0, q.Length - 1));
+                    cash = q;
                     return func.Fac(d).ToString();
+                    
                 }
                 catch (FormatException)
                 {
@@ -85,6 +89,18 @@ namespace Calc
         public void Clear()
         {
             Console.Clear();
+        }
+        /// <summary>
+        /// Shows last asked command.
+        /// </summary>
+        public void ShowLast()
+        {
+            if (cash != "")
+            {
+                Console.WriteLine(cash);
+            }
+            else
+                Console.WriteLine("Netu");
         }
         /// <summary>
         /// Recognize and do what action user expects if its possible, if not reports about it, provides templates.
@@ -116,11 +132,11 @@ namespace Calc
                     Console.WriteLine(ParserM(Console.ReadLine()));
                 }
 
-                if (rs == "4")
+                if (rs == "5")
                 {
                     stf = false;
                 }
-                if (rs== "3")
+                if (rs== "4")
                 {
                     Clear();
                     Console.WriteLine("Vibor deistvia");
@@ -129,14 +145,19 @@ namespace Calc
                     Console.WriteLine("3.Ochistit'");
                     Console.WriteLine("4.Stop");
                 }
+                if (rs == "3")
+                {
+                    ShowLast();
+                }
                 else
                 {
                     Console.WriteLine("Podumai eshe");
                     Console.WriteLine("Vibor deistvia");
                     Console.WriteLine("1.Spravka");
                     Console.WriteLine("2.Vvod virazhenia");
-                    Console.WriteLine("3.Ochistit'");
-                    Console.WriteLine("4.Stop");
+                    Console.WriteLine("4.Pokazat' poslednii zapros");
+                    Console.WriteLine("4.Ochistit'");
+                    Console.WriteLine("5.Stop");
 
                 }
 
