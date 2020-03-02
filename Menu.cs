@@ -86,6 +86,14 @@ namespace Calc
         /// <summary>
         /// Clears console output.
         /// </summary>
+        public void Kotik()
+        {
+            Console.WriteLine(@" /\_/\ ");
+            Console.WriteLine(@"> ^,^ <");
+            Console.WriteLine(@"  / \");
+            Console.WriteLine(@" (___)__");
+
+        }
         public void Clear()
         {
             Console.Clear();
@@ -149,6 +157,11 @@ namespace Calc
                 {
                     ShowLast();
                 }
+                if (rs == "Nya")
+                {
+                    Console.WriteLine("Kotik naiden!");
+                    Kotik();
+                }
                 else
                 {
                     Console.WriteLine("Podumai eshe");
@@ -158,7 +171,6 @@ namespace Calc
                     Console.WriteLine("4.Pokazat' poslednii zapros");
                     Console.WriteLine("4.Ochistit'");
                     Console.WriteLine("5.Stop");
-
                 }
 
             }
