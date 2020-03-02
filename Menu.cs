@@ -80,6 +80,13 @@ namespace Calc
             return "Input nekorrektnii";
         }
         /// <summary>
+        /// Clears console output.
+        /// </summary>
+        public void Clear()
+        {
+            Console.Clear();
+        }
+        /// <summary>
         /// Recognize and do what action user expects if its possible, if not reports about it, provides templates.
         /// </summary>
         /// <value>StartMenu gets strings from user, and strings from ParserM. Returns nothing, but prints in console the results.</value>
@@ -102,13 +109,6 @@ namespace Calc
                     Console.WriteLine("Sqrt: Sqrt(double)");
                     Console.WriteLine("Pow: double^double");
                     Console.WriteLine("Fac: double!");
-                    //Sum double+double
-                    //Dif double-double
-                    //Comp double*double
-                    //Div double/double
-                    //Sqrt Sqrt(double)
-                    //Pow double^double
-                    //Fac double!
                 }
                 if (rs == "2")
                 {
@@ -116,9 +116,18 @@ namespace Calc
                     Console.WriteLine(ParserM(Console.ReadLine()));
                 }
 
-                if (rs == "3")
+                if (rs == "4")
                 {
                     stf = false;
+                }
+                if (rs== "3")
+                {
+                    Clear();
+                    Console.WriteLine("Vibor deistvia");
+                    Console.WriteLine("1.Spravka");
+                    Console.WriteLine("2.Vvod virazhenia");
+                    Console.WriteLine("3.Ochistit'");
+                    Console.WriteLine("4.Stop");
                 }
                 else
                 {
@@ -126,7 +135,8 @@ namespace Calc
                     Console.WriteLine("Vibor deistvia");
                     Console.WriteLine("1.Spravka");
                     Console.WriteLine("2.Vvod virazhenia");
-                    Console.WriteLine("3.Stop'");
+                    Console.WriteLine("3.Ochistit'");
+                    Console.WriteLine("4.Stop");
 
                 }
 
