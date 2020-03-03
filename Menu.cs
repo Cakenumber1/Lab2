@@ -84,7 +84,7 @@ namespace Calc
             return "Input nekorrektnii";
         }
         /// <summary>
-        /// Clears console output.
+        /// Prints Kotik.
         /// </summary>
         public void Kotik()
         {
@@ -94,6 +94,9 @@ namespace Calc
             Console.WriteLine(@" (___)__");
 
         }
+        /// <summary>
+        /// Clears console output.
+        /// </summary>
         public void Clear()
         {
             Console.Clear();
